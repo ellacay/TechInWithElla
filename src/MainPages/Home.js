@@ -9,10 +9,19 @@ const Home = (({history})=>{
 
     const useStyles = makeStyles((theme) => ({
 body:{
-  width:"90%",
-  marginRight:"5%",
-  marginLeft:"5%",
-}
+            paddingLeft: "10vw",
+            paddingRight: "10vw",
+
+         
+            display: "flex",
+            justifyContent: "center",
+flexDirection: "column"
+        },
+        blogs:{
+                padding: "10vw",
+        display: "flex",
+            justifyContent:"flex-start"
+        }
    
     }))
 
@@ -29,7 +38,7 @@ body:{
 <p>Tech In With Ella is a discussion onn the technology industry. The ins and outs from the pov of a young woman. The journey taken to learn the skills to code and navigate the complications and problems that arose.</p>
 </div>
 
-<div className={classes.body} key="Blogs">
+<div className={classes.blogs} key="Blogs">
 <Blog></Blog>
 </div>
 

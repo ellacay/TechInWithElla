@@ -7,7 +7,6 @@ import Snackbar from "@mui/material/Snackbar";
 import { set } from "@firebase/database";
 import axios from "axios"
 
-import { makeStyles } from '@material-ui/core/styles'
 
 const EditPost = (()=>{
 
@@ -68,44 +67,15 @@ const EditPost = (()=>{
         } catch (err) {}
       };
 
-      const useStyles = makeStyles((theme) => ({
 
-        writeImg:{
-          
-          width: "90%",
-          height: "250px",         
-           borderRadius: "10px",
-          objectFit: "cover",
-        },
-        body:{
-          
-          width: "100%",
-          margin:'1px',
-        
-      
-        }
-        
-        
-      }))
-
-
-      const classes = useStyles()
       
     return(
-        <div >
+        <div className="write" >
         {file && (
           <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
         )}
      
-          <button className="writeSubmit" 
-          onClick={() => {
-   
-         axios.delete(`/posts/${id}`);
-            window.location.replace("/authorHome/");
-        }}
-        >
-        Delete
-      </button>
+       
         <form className="writeForm" onSubmit={handleSubmit}>
           <div className="writeFormGroup">
             <label htmlFor="fileInput">
@@ -140,10 +110,17 @@ const EditPost = (()=>{
               onChange={e=>setDesc(e.target.value)}
             ></textarea>
           </div>
-          <button className="writeSubmit" type="submit">
+          <div>     <button className='writeSubmit' type="submit">
             Publish
           </button>
-          
+              <button       onClick={() => {
+   
+         axios.delete(`/posts/${id}`);
+            window.location.replace("/authorHome/");
+        }}  className='writeDelete' >
+            Delete
+          </button></div>
+     
           
         </form>
 

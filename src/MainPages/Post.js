@@ -17,7 +17,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { styled } from '@mui/material/styles';
 import MuiGrid from '@mui/material/Grid';
 
-
+import "../App.css"
 const Grid = styled(MuiGrid)(({ theme }) => ({
   width: '100%',
   ...theme.typography.body2,
@@ -86,16 +86,32 @@ const Post = (()=>{
 
         writeImg:{
           
-          width: "100%",
-          height: "250px",         
+    width:"100%",
+          height: "auto",         
            borderRadius: "10px",
-          objectFit: "cover",
+          objectFit: "fill",
           marginTop:"2%",
+          cssFloat:"left"
         },
         body:{
           
-          width:"80%",
-          marginLeft:"5%",
+          paddingLeft: "10vw",
+          paddingRight:"10vw",
+        
+      
+      
+        },
+        title:{
+          alignText:"center"
+        },
+
+        textBody: {
+        
+          
+              display: "flex",
+          alignItems:"center",
+          flexDirection: "column",
+       
       
       
         },
@@ -116,13 +132,11 @@ const Post = (()=>{
         },
         commentBody:{
           
-          
-          margin:'1px',
+        
           borderStyle:"solid",
           borderColor:"#d6d6d4",
           borderRadius:"15px",
-          width:"100%",
-      
+        
 
         },
         replyBody:{
@@ -330,21 +344,20 @@ function ReplyTernary(props) {
          {error}
         </Alert>
       </Snackbar>
-      <div className={classes.body}>
-      {post.photo && <img className={classes.writeImg} src={PF + post.photo} alt="" />}
+    
+    
 
-        <h2 >{title}</h2>
+        
+          <div className={classes.textBody} >
+          <h2 className={classes.title} >{title}</h2>  {post.photo && <img className="writeImg" src={PF + post.photo} alt="" />}
+        <ReactMarkdown>{desc}</ReactMarkdown>
+</div>
        
-        <ReactMarkdown className={classes.markdown}  >{desc}</ReactMarkdown>
-  
-        </div>
+        
 
-        <div className={classes.commentSection}>
-     
-        <div >
+ 
 
-
-        <div className={classes.body} >
+        <div className={classes.commentSection} >
         <h3>Comments</h3>
         {comments.map(comments => {
             if(comments.replyTo === "new")
@@ -415,11 +428,11 @@ function ReplyTernary(props) {
         
         </div>
           
-          </div>
+        
           
-        </div>
+    
      
-        <div className={classes.body} >
+        <div className={classes.AddComment} >
     
       <h4 >Add Comment</h4>
          

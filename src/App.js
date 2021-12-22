@@ -15,19 +15,21 @@ import Footer from '../src/Components/Footer'
 import AuthorHome from './AuthorPages/AuthorHome'
 import About from './MainPages/About'
 import FilterBlogs from './MainPages/FilterBlogs'
-import { autocompleteClasses } from '@mui/material';
+
 export const Routes = () => {
     const useStyles = makeStyles((theme) => ({
         body:{
          display:"flex",
         
-         width:"95wv"
+            width: "95wv",
+         justifyContent:"center"
         },
         sideBar:{
             width:"1wv",
             marginRight:"auto",
            }
            
+  
             }))
         
    
@@ -45,9 +47,9 @@ export const Routes = () => {
           
               <Route path="/" exact component={Home} />
               <Route path="/authorHome" exact component={AuthorHome} />
-              <Route path="/write" exact component={Write} />
+              <Route path="/writeTechInWithElla" exact component={Write} />
               <Route path="/blog" exact component={Blog} />
-              <Route path="/authorBlogs" exact component={AuthorBlogs} />
+           
               <Route path="/contactMe" exact component={ContactMe} />
               <Route path="/post/:id" exact component={Post} />
               <Route path="/editPost/:id" exact component={EditPost} />
@@ -62,7 +64,7 @@ export const Routes = () => {
               <Route path="/post/:id" className={classes.sideBar} exact component={SideBar} />
 
 
-              <Route path="/filter/:category" exact component={SideBar} />
+              <Route path="/filter/:category" className={classes.sideBar} exact component={SideBar} />
           </div>
           <Footer/>
           </div>

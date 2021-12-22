@@ -23,10 +23,7 @@ const classes = useStyles()
 
     <div flexDirection="row">
       <div flexDirection="row">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
+ 
     
         <ul className="topList">
         <li className="topListItem">

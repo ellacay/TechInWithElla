@@ -5,6 +5,7 @@ import Profile from '../Images/profilePic.JPG';
 import Snackbar from "@mui/material/Snackbar";
 import { Link } from "react-router-dom";
 import MuiAlert from "@mui/material/Alert";
+import "../App.css";
    import Blog from './Blog'
    import firebase from "firebase";
    import { useEffect } from "react";
@@ -87,8 +88,8 @@ padding:"2px",
 
 image:{
 
-    width: "auto",
-    height: "auto",
+    width: "10px",
+    height: "10px",
     borderRadius:"50px",
     display:"flex",
     justifyContent:"center",
@@ -178,7 +179,7 @@ flexDirection:"column",
 
 
 
-<div className={classes.container}>
+<div className="sideBarContainer">
 <Snackbar
 open={subscribeSucessfull}
 autoHideDuration={2000}

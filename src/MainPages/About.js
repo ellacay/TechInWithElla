@@ -1,14 +1,13 @@
 import React from "react";
 import "../App.css";
 import Profile from "../Images/profilePic.JPG";
+import Contact from "../Images/contactQR.jpeg";
+
 import { makeStyles } from "@material-ui/core/styles";
+import { margin } from "@mui/system";
 const About = () => {
   const useStyles = makeStyles((theme) => ({
-    body: {
-      display: "flex",
-      flexDirection: "row",
-      width: "100vw",
-    },
+
 
     text: {
 
@@ -21,31 +20,37 @@ const About = () => {
       width: "30%",
       fontFamily: "Quicksand, sans-serif",
       fontWeight:'bold',
-      fontSize:'3em'
+      fontSize:'1.5em'
     },
 
-    profileImage: {
-      width: "370px",
-      height: "400px",
-      borderRadius: "25px",
-      margin: "10px",
-    },
+
+      body: {
+        padding:"10vw",
+      },
+      qr:{
+          width: "100px",
+       alignSelf:"center",
+      }
+      
+   
   }));
 
   const classes = useStyles();
   return (
-    <div>
-      <div>
-        <p className={classes.title}>Ella Smith</p>
+   
+      <div >
+     
         <img
-          style={{ float: "left", margin: "30px" }}
-          className={classes.profileImage}
+          style={{ cssFloat: "left", margin: "30px" }}
+          className="profileImage"
           src={Profile}
           height="100"
           width="100"
           alt="Ella"
-        />
-        <p    className={classes.text}>
+              />
+              
+              <p className={classes.text}>
+                     <p className={classes.title}>Ella Cay Smith</p>
           Young females are instrumental in maintaining productivity, creativity
           and passion within the ever-changing workplace. This is especially
           true for developing industries such as technology, which has a current
@@ -86,14 +91,15 @@ const About = () => {
           <br/>
           <br/>
           Contact me!
-          <br/>Email: ellacaysmith@gmail.com
+          
       
 
-        </p>
-        ​
-        <p></p>
+          </p>
+          <img  className={classes.qr} src={Contact} alt="contact"/>
+    
+
       </div>
-    </div>
+  
   );
 };
 

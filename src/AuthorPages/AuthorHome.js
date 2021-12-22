@@ -4,8 +4,18 @@ import SideBar from '../Components/SideBar'
 import AuthorBlogs from '../AuthorPages/AuthorBlogs'
 import AddIcon from '@mui/icons-material/Add';
 import IconButton from '@mui/material/IconButton';
+import { useEffect } from "react";
    
 const Home = (({history})=>{
+
+  const [error, setError] = useState("") 
+    const [author, setAuthor] = useState(false) 
+
+  let name = "EllaCay68"
+  let password ="blogforlifex"
+    const [authorName, setAuthorName] = useState("") 
+ const [authorPassword, setAuthorPassword] = useState("") 
+
 
     const useStyles = makeStyles((theme) => ({
 buttons:{
@@ -30,8 +40,7 @@ body:{
   flexDirection:"row",
 
   
-  }
-,
+  },
     
   
     title:{
@@ -41,12 +50,33 @@ body:{
     }))
 
          
+  const login = async () => {
 
+  if (authorName === name) {
+
+       if (authorPassword === password) {
+      setAuthor(true)
+       }
+       else {
+         
+    setError("Incorrect Password")
+  
+    }
+    
+  }
+  else {
+    setError("Incorrect Username")
+  }
+ 
+    
+     
+};
+  
 
     const classes = useStyles()
     return(
-
-
+<div>
+{author ? (
 
 <div className={classes.body} key="Blogs">
 <div className={classes.header}  >
@@ -55,7 +85,7 @@ body:{
 
       <IconButton onClick={() => {
    
-        window.location.replace("/write")
+        window.location.replace("/writeTechInWithElla")
     
     }}
             key={`addButton`}
@@ -69,7 +99,35 @@ body:{
 </div>
 
 
+        ) : (<div>
+            
+           
+            <input
+              type="text"
+              placeholder="Username"
+  
+              autoFocus={true}
+              value={authorName}
+              onChange={e=>setAuthorName(e.target.value)}
+            />
+                <input
+              type="text"
+              placeholder="Password"
+          
+              autoFocus={true}
+              value={authorPassword}
+              onChange={e=>setAuthorPassword(e.target.value)}
+            />
+            <button 
+      onClick={() => {
+   
+    login()
+    
+              }} >Login</button>
+            <p>{error}</p>
 
+</div>)}
+</div>
     )
 })
 

@@ -1,16 +1,26 @@
 .write {
-    padding-top: 50px;
-    margin-left:auto;
+display: flex;
+justify-content: center;
+align-items: center;
   }
   
   .writeImg {
  margin-left:auto;
-    width: 70vw;
-    height: 250px;
+    width: 100%;
+    height: 350px;
     border-radius: 10px;
     object-fit: cover;
   }
   
+  @media(min-width:50em){
+      .writeImg {
+ margin-left:auto;
+  height: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  }
   .writeForm {
      margin-left:auto;
     position: relative;
@@ -40,6 +50,7 @@
     border: none;
     padding: 20px;
     width: 70vw;
+
   }
 
     
@@ -70,6 +81,21 @@
     position: absolute;
     top: 20px;
     right: 50px;
+    color: white;
+    background-color: #6035d4;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+    
+  .writeDelete {
+    position: absolute;
+    top: 20px;
+    right: 150px;
     color: white;
     background-color: #6035d4;
     padding: 10px;

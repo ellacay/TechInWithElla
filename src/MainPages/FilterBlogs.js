@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, useParams } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles'
-import SideBar from '../Components/SideBar'
-import Blog from '../Components/Blog'
 
 import { slide as Menu } from 'react-burger-menu'
-import Profile from '../Images/profilePic.JPG';
 
-   import firebase from "firebase";
    import { useEffect } from "react";
-   import { useCallback } from "react";
+ 
    import Card from '@mui/material/Card';
    import CardHeader from '@mui/material/CardHeader';
    import { CardActionArea } from '@mui/material';
-   import { storage } from '../index'
+
    import axios from "axios"
    import {
        Grid
@@ -137,8 +133,7 @@ flexDirection:"row",
   
 
       const [filter, setFilter] = useState([]);
-      
-      const [categoryChosen, setCategoryChosen] = useState("");
+
       
   
 

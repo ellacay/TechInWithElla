@@ -7,6 +7,58 @@
   pointer-events: none;
 }
 
+.sideBarContainer{
+      display: none;
+      width:20vw;    
+      margin:3vw;
+        height: 100%;
+            margin-right:"auto";
+              flex-direction: column;
+            
+          
+                border-radius: 25px;
+  border-color:black;  
+  border-width:1px;
+  border-style:solid;
+  padding: 20px;
+  width: 12vw;
+  height: auto;
+  margin:10px;
+
+            
+}
+.aboutBody{
+  padding:10vw;
+}
+    .profileImage{
+      width: 80vw;
+        height: auto;
+      border-radius: 25px;
+
+      }
+
+
+@media(min-width:40em){
+  .sideBarContainer{
+    display: none;
+  }
+     .profileImage{
+      width: 80vw;
+ 
+      }
+}
+@media(min-width:60em){
+  .sideBarContainer{
+    display: flex;
+         
+  }
+     .profileImage{
+      width: 35vw;
+ 
+      }
+  }
+
+ 
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
