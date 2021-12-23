@@ -1,0 +1,139 @@
+        .writeImg{
+          
+    width:100%;
+          height: auto;         
+           border-radius: 10px;
+          object-fit: fill;
+          margin-top:2%;
+          float:left;
+        }
+        .body{
+          
+          padding-left:10vw;
+          padding-right:10vw;
+        
+      
+      
+        }
+        .title{
+          text-align:center;
+        }
+
+        .textBody{
+        
+          
+              display: flex;
+          align-items:center;
+          flex-direction: column;
+       
+      
+      
+        }
+        .markdown{
+          
+          width: 60vw;
+          margin:1px;
+        
+      
+        }
+        .commentHeader{
+         display:flex;
+         flex-direction:row; 
+     background-color:#d6d6d4;
+     width:"100%";
+        
+      
+        }
+        .commentBody{
+          
+        
+          border-style:solid;
+          border-color:#d6d6d4;
+          border-radius:15px;
+        
+
+        }
+        .replyBody{
+          
+          
+          margin-left:5%;
+          margin-top:10px;   
+          margin-top:10px;
+          border-style:solid;
+          border-color:#d6d6d4;
+          border-radius:15px;
+          width:95%;
+      
+
+        }
+
+        line{
+          
+       border-left:solid
+
+
+        }
+
+        .addBody{
+          
+          
+          margin:1px;
+    
+      
+          width:100%;
+      
+      
+
+        }
+
+        .addCommentBody{
+          
+          flex-direction:row;
+          margin:1px;
+          
+ 
+      
+
+        }
+    .addCommentButton{
+background-color:#2195ed;
+    }
+
+        textArea{
+          
+          
+          margin:1px;
+        
+      
+          width:100%;
+      
+        }
+        .commentSection{
+          
+          display:flex;
+          flex-direction:column; 
+          width:100%
+      
+        }
+        .commentText{
+          
+          margin:1%
+      
+        }
+        .commentName{
+          color:#2195ed;
+          margin-left: 1%;
+          margin-right:2%;
+        }
+        .commentWrite{
+          
+         width:50%;
+      
+        }
+        .arrow{
+         border-left:Solid;
+         border-width:1px;
+         }
+        
+
+        

@@ -1,41 +1,9 @@
 import React from "react";
-import "../App.css";
+import "../MainPages/About.scss"
 import Profile from "../Images/profilePic.JPG";
 import Contact from "../Images/contactQR.jpeg";
 
-import { makeStyles } from "@material-ui/core/styles";
-import { margin } from "@mui/system";
 const About = () => {
-  const useStyles = makeStyles((theme) => ({
-
-
-    text: {
-
-    margin:"30px",
-    fontFamily: "Quicksand, sans-serif",
-    },
-    title: {
-      display: "flex",
-      flexDirection: "column",
-      width: "30%",
-      fontFamily: "Quicksand, sans-serif",
-      fontWeight:'bold',
-      fontSize:'1.5em'
-    },
-
-
-      body: {
-        padding:"10vw",
-      },
-      qr:{
-          width: "100px",
-       alignSelf:"center",
-      }
-      
-   
-  }));
-
-  const classes = useStyles();
   return (
    
       <div >
@@ -49,8 +17,8 @@ const About = () => {
           alt="Ella"
               />
               
-              <p className={classes.text}>
-                     <p className={classes.title}>Ella Cay Smith</p>
+              <p className="text">
+                     <p className="title">Ella Cay Smith</p>
           Young females are instrumental in maintaining productivity, creativity
           and passion within the ever-changing workplace. This is especially
           true for developing industries such as technology, which has a current
@@ -95,7 +63,7 @@ const About = () => {
       
 
           </p>
-          <img  className={classes.qr} src={Contact} alt="contact"/>
+          <img  className="qr" src={Contact} alt="contact"/>
     
 
       </div>

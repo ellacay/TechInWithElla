@@ -4,27 +4,11 @@ import ReactMarkdown from "react-markdown";
 import MuiAlert from "@mui/material/Alert";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
 import Snackbar from "@mui/material/Snackbar";
-import { set } from "@firebase/database";
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import axios from "axios"
-import AddIcon from '@mui/icons-material/Add';
-import IconButton from '@mui/material/IconButton'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button } from "@material-ui/core";
-import Divider from '@mui/material/Divider';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { styled } from '@mui/material/styles';
-import MuiGrid from '@mui/material/Grid';
-
+import "../MainPages/Post.scss"
 import "../App.css"
-const Grid = styled(MuiGrid)(({ theme }) => ({
-  width: '100%',
-  ...theme.typography.body2,
-  '& [role="separator"]': {
-    margin: theme.spacing(0, 2),
-  },
-}));
 
 const Post = (()=>{
 
@@ -82,145 +66,6 @@ const Post = (()=>{
       const PF = "http://localhost:5000/images/";
    
 
-      const useStyles = makeStyles((theme) => ({
-
-        writeImg:{
-          
-    width:"100%",
-          height: "auto",         
-           borderRadius: "10px",
-          objectFit: "fill",
-          marginTop:"2%",
-          cssFloat:"left"
-        },
-        body:{
-          
-          paddingLeft: "10vw",
-          paddingRight:"10vw",
-        
-      
-      
-        },
-        title:{
-          alignText:"center"
-        },
-
-        textBody: {
-        
-          
-              display: "flex",
-          alignItems:"center",
-          flexDirection: "column",
-       
-      
-      
-        },
-        markdown:{
-          
-          width: "60vw",
-          margin:'1px',
-        
-      
-        },
-        commentHeader:{
-         display:'flex',
-         flexDirection:"row", 
-     backgroundColor:"#d6d6d4",
-     width:"100%",
-        
-      
-        },
-        commentBody:{
-          
-        
-          borderStyle:"solid",
-          borderColor:"#d6d6d4",
-          borderRadius:"15px",
-        
-
-        },
-        replyBody:{
-          
-          
-          marginLeft:'5%',
-          marginTop:"10px",   marginBottom:"10px",
-          borderStyle:"solid",
-          borderColor:"#d6d6d4",
-          borderRadius:"15px",
-          width:"95%",
-      
-
-        },
-
-        line:{
-          
-       borderLeft:"solid",
-
-
-        },
-
-        addBody:{
-          
-          
-          margin:'1px',
-      
-      
-          width:"100%",
-      
-      
-
-        },
-
-        addCommentBody:{
-          
-          flexDirection:"row", 
-          margin:'1px',
-          
- 
-      
-
-        },
-    addCommentButton:{
-backgroundColor:"#2195ed"
-    },
-
-        textArea:{
-          
-          
-          margin:'1px',
-        
-      
-          width:"100%",
-      
-        },
-        commentSection:{
-          
-          display:'flex',
-          flexDirection:"column", 
-          width:"100%",
-      
-        },
-        commentText:{
-          
-          margin:"1%",
-      
-        },commentName:{
-          color:"#2195ed",
-          marginLeft: "1%",
-          marginRight:"2%",
-        },  commentWrite:{
-          
-         width:"50%",
-      
-        },  arrow:{
-         borderLeft:"Solid",
-         borderWidth:"1px",
-         }
-        
-
-        
-        
-      }))
 
       const [comments, setComments] = useState([]);
       const [replies, setReplies] = useState(["hey","2"]);
@@ -286,18 +131,18 @@ function ReplyTernary(props) {
         const [email, setEmail] = useState("");
         const [content, setContent] = useState(null);
 
-     return(   <div className={classes.body} >
+     return(   <div className="body">
     
    
-    <div  className={classes.addCommentBody} >
+    <div  className="addCommentBody" >
 
-  <input className={classes.inputInfo}   value={name}
+  <input className="inputInfo"  value={name}
   onChange={(e) => setName(e.target.value)} type="text" placeholder="Name"></input>
-      <input className={classes.inputInfo}   value={email}
+      <input className="inputInfo"  value={email}
       onChange={(e) => setEmail(e.target.value)} type="text"  placeholder="Email"></input>
    
       <textarea value={content}
-      onChange={(e) => setContent(e.target.value)} className={classes.textArea}  placeholder= "Join the discussion!"/>
+      onChange={(e) => setContent(e.target.value)} className="textArea"  placeholder= "Join the discussion!"/>
    
       </div>
       <button   onClick={() => { 
@@ -321,15 +166,15 @@ function ReplyTernary(props) {
         console.log("bingo")
         window.location.replace("/post/" + postId);
       
-      } catch (err) {}}} className={classes.commentButton}>Add Comment</button>
+      } catch (err) {}}} className="commentBody">Add Comment</button>
   </div>)
  
    }
 
 
-      const classes = useStyles()
+  
     return(
-        <div className={classes.body}>
+        <div className="body">
         <Snackbar
         open={openError}
         autoHideDuration={6000}
@@ -348,8 +193,8 @@ function ReplyTernary(props) {
     
 
         
-          <div className={classes.textBody} >
-          <h2 className={classes.title} >{title}</h2>  {post.photo && <img className="writeImg" src={PF + post.photo} alt="" />}
+          <div className="textBody" >
+          <h2 className="title" >{title}</h2>  {post.photo && <img className="writeImg" src={PF + post.photo} alt="" />}
         <ReactMarkdown>{desc}</ReactMarkdown>
 </div>
        
@@ -357,16 +202,16 @@ function ReplyTernary(props) {
 
  
 
-        <div className={classes.commentSection} >
+        <div className="commentSection" >
         <h3>Comments</h3>
         {comments.map(comments => {
             if(comments.replyTo === "new")
             return(
             <div>
  
-                 <div className={classes.commentBody}>
-            <div className={classes.commentHeader}>
-            <p  className={classes.commentName}>{comments.name}</p>
+                 <div className="commentBody">
+            <div className="commentHeader">
+            <p  className="commentName">{comments.name}</p>
             <br/>
             <p>{new Date(comments.createdAt).toDateString()}</p>
 
@@ -377,33 +222,33 @@ function ReplyTernary(props) {
        
              
              }}
-             className={classes.commentName} >Reply</Button>
+             className="commentName">Reply</Button>
             </div>
        
-            <ReactMarkdown className={classes.commentText} >{comments.content}</ReactMarkdown>
+            <ReactMarkdown className="commentText" >{comments.content}</ReactMarkdown>
           
           </div>
       <div  >
-    <div className={classes.arrow}/>
+    <div className="arrow"/>
     <ReplyTernary commentId={comments._id}></ReplyTernary>
 
           {replies.map(reply => {
             if(reply.replyTo === comments._id)
             return(<div >
        
-              <div className={classes.replyBody}>
+              <div className="replyBody">
               
    
               <div >
-              <div className={classes.commentHeader}>
-              <p  className={classes.commentName}>{reply.name}</p>
+              <div className="commentHeader">
+              <p  className="commentName">{reply.name}</p>
               <br/>
               <p>{new Date(reply.createdAt).toDateString()}</p>
   
            
               </div>
          
-              <ReactMarkdown className={classes.commentText} >{reply.content}</ReactMarkdown>
+              <ReactMarkdown className="commentText">{reply.content}</ReactMarkdown>
             
             </div>
       
@@ -432,22 +277,22 @@ function ReplyTernary(props) {
           
     
      
-        <div className={classes.AddComment} >
+        <div className="AddComment" >
     
       <h4 >Add Comment</h4>
          
-          <div  className={classes.addCommentBody} >
+          <div  className="addCommentBody" >
 
-        <input className={classes.inputInfo}   value={name}
+        <input className="inputInfo"    value={name}
         onChange={(e) => setName(e.target.value)} type="text" placeholder="Name"></input>
-            <input className={classes.inputInfo}   value={email}
+            <input className="inputInfo"  value={email}
             onChange={(e) => setEmail(e.target.value)} type="text"  placeholder="Email"></input>
          
             <textarea value={content}
-            onChange={(e) => setContent(e.target.value)} className={classes.textArea}  placeholder= "Join the discussion!"/>
+            onChange={(e) => setContent(e.target.value)} className="textArea"  placeholder= "Join the discussion!"/>
          
             </div>
-            <button   onClick={() => handleComment()} className={classes.commentButton}>Add Comment</button>
+            <button   onClick={() => handleComment()} className="commentButton">Add Comment</button>
         </div>
         </div>
     )})

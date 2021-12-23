@@ -2,7 +2,6 @@ import { useState } from "react";
 import "../AuthorPages/Write/Write.css";
 import axios from "axios";
 
-import { makeStyles } from '@material-ui/core/styles'
 
 export default function Comments(props) {
   const [name, setName] = useState("");
@@ -10,11 +9,7 @@ export default function Comments(props) {
   const [content, setContent] = useState(null);
 let postId = props.id
 console.log(props.id)
-  const useStyles = makeStyles((theme) => ({
 
-
-        }))
-    
          
         
   const handleSubmit = async (e) => {

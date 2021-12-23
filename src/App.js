@@ -3,14 +3,12 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Blog from './Components/Blog'
 import { makeStyles } from '@material-ui/core/styles'
-import ContactMe from './Components/Blog'
 import Home from '../src/MainPages/Home'
 import Post from '../src/MainPages/Post'
-import TopBar from './Components/TopBar/TopBar'
+import TopBar from './Components/TopBar'
 import Write from './AuthorPages/Write/Write'
 import SideBar from './Components/SideBar'
 import EditPost from './AuthorPages/EditPost';
-import AuthorBlogs from './AuthorPages/AuthorBlogs';
 import Footer from '../src/Components/Footer'
 import AuthorHome from './AuthorPages/AuthorHome'
 import About from './MainPages/About'
@@ -50,7 +48,7 @@ export const Routes = () => {
               <Route path="/writeTechInWithElla" exact component={Write} />
               <Route path="/blog" exact component={Blog} />
            
-              <Route path="/contactMe" exact component={ContactMe} />
+      
               <Route path="/post/:id" exact component={Post} />
               <Route path="/editPost/:id" exact component={EditPost} />
               <Route path="/about" exact component={About} />
