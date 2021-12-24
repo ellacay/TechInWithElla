@@ -1,27 +1,17 @@
 import React, { useState } from 'react'
-import { slide as Menu } from 'react-burger-menu'
-import { makeStyles } from '@material-ui/core/styles'
-import Profile from '../Images/profilePic.JPG';
-
-   import firebase from "firebase";
+import Edit from '@mui/icons-material/Edit';
+import "../Style/AuthorBlogs.scss"
    import { useEffect } from "react";
-   import { useCallback } from "react";
    import Card from '@mui/material/Card';
    import CardHeader from '@mui/material/CardHeader';
-   import { CardActionArea } from '@mui/material';
-   import { storage } from '../index'
    import axios from "axios"
    import {
        Grid
      } from '@material-ui/core/'
    
-const Blog = ((props)=>{
-
-    const useStyles = makeStyles((theme) => ({
+const AuthorBlogs = (({history})=>{
 
 
-   
-  }))
 
 
     const [posts, setPosts] = useState([]);
@@ -30,14 +20,12 @@ const Blog = ((props)=>{
    
     
     useEffect(() => {
-      console.log(props.category)
       const fetchPosts = async () => {
        const res = await axios.get("/posts");
        console.log(res)
        setPosts(res.data)
      
       };
-
       fetchPosts();
     
     }, []);
@@ -47,41 +35,43 @@ const Blog = ((props)=>{
     
         
         
-    const classes = useStyles()
     return(
 
 
 
-
-      <div >
+<div >
       <Grid
       container
       spacing={3}
       direction="row"
-    width="80%"
+    
      
   >
 
   {posts.map((blogPosts) => (
-    <Grid item     width="130%" >
+    <Grid item xs={12} sm={4} md={3} >
     <Card 
-    className={classes.card}
-    onClick={() => {
-   
-      window.location.replace("/post/" + blogPosts._id);
-  
-  }}
->
-    <CardActionArea>
+    className="card"
+
+    sx={{ maxWidth: 345 }}>
+
     <CardHeader
     key={blogPosts.title}
-    className={classes.cardHeader}
+    className="cardHeader"
     title={blogPosts.title}
     subheader={new Date(blogPosts.createdAt).toDateString()}
   />
-  <img className={classes.image} src={PF + blogPosts.photo} alt="" />
+<div  className="body">
+  <img className="image" src={PF + blogPosts.photo} alt="" />
 
-    </CardActionArea>
+
+ <button   className="edit"  onClick={() => {
+   
+    window.location.replace("/editpost/" + blogPosts._id);
+
+}}
+><Edit></Edit></button>
+  </div>
   </Card>
   </Grid>
 
@@ -94,4 +84,4 @@ const Blog = ((props)=>{
     )
 })
 
-export default Blog
+export default AuthorBlogs

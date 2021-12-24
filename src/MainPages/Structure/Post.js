@@ -1,15 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from "react-markdown";
-import MuiAlert from "@mui/material/Alert";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
-import Snackbar from "@mui/material/Snackbar";
 import axios from "axios"
-import { makeStyles } from '@material-ui/core/styles'
 import { Button } from "@material-ui/core";
-import "../MainPages/Post.scss"
-import "../App.css"
-
+import "../Style/Post.scss"
+import "../../App.css"
 const Post = (()=>{
 
     
@@ -51,17 +47,6 @@ const Post = (()=>{
 
 
 
-
-    const [openError, setOpenError] = React.useState(false);
-
-    const [error, setError] = React.useState("");
-      const handleError = () => {
-        setOpenError(!openError);
-      };
-  
-    const Alert = React.forwardRef(function Alert(props, ref) {
-        return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-      });
 
       const PF = "http://localhost:5000/images/";
    
@@ -175,20 +160,7 @@ function ReplyTernary(props) {
   
     return(
         <div className="body">
-        <Snackbar
-        open={openError}
-        autoHideDuration={6000}
-        onClose={handleError}
-      >
-        <Alert
-          onClose={handleError}
-          severity="success"
-          sx={{ width: "100%" }}
-        >
-
-         {error}
-        </Alert>
-      </Snackbar>
+ 
     
     
 

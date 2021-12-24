@@ -1,18 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Blog from './Components/Blog'
+import Blog from './Components/Structure/Blog'
 import { makeStyles } from '@material-ui/core/styles'
-import Home from '../src/MainPages/Home'
-import Post from '../src/MainPages/Post'
-import TopBar from './Components/TopBar'
-import Write from './AuthorPages/Write/Write'
-import SideBar from './Components/SideBar'
-import EditPost from './AuthorPages/EditPost';
-import Footer from '../src/Components/Footer'
-import AuthorHome from './AuthorPages/AuthorHome'
-import About from './MainPages/About'
-import FilterBlogs from './MainPages/FilterBlogs'
+import Home from './MainPages/Structure/Home'
+import Post from './MainPages/Structure/Post'
+import TopBar from './Components/Structure/TopBar'
+import Write from './AuthorPages/Structure/Write'
+import SideBar from './Components/Structure/SideBar'
+import EditPost from './AuthorPages/Structure/EditPost';
+import Footer from './Components/Structure/Footer'
+import AuthorHome from './AuthorPages/Structure/AuthorHome'
+import About from './MainPages/Structure/About'
+import FilterBlogs from './MainPages/Structure/FilterBlogs'
 
 export const Routes = () => {
     const useStyles = makeStyles((theme) => ({

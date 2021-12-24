@@ -10,11 +10,7 @@ import firebase from "firebase";
 import "firebase/storage";
 import "firebase/database";
 import "firebase/firestore";
-import { useEffect } from "react";
 import "./Fonts/Personality/personalityDEMO.otf"
-
-
-const serviceAccount = require('./serviceKey.json');
 
 var firebaseConfig = {
   apiKey: "AIzaSyDhn5QfSxhxbXBomWqwemNdHkBr8tBcK1s",

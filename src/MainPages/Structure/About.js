@@ -1,7 +1,7 @@
 import React from "react";
-import "../MainPages/About.scss"
-import Profile from "../Images/profilePic.JPG";
-import Contact from "../Images/contactQR.jpeg";
+import "../Style/About.scss"
+import Profile from "../../Images/profilePic.JPG";
+import Contact from "../../Images/contactQR.jpeg";
 
 const About = () => {
   return (

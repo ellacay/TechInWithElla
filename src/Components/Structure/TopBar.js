@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Topbar.scss";
+import "../Style/Topbar.scss";
 
-import Header from '../Images/header.svg';
+import Header from '../../Images/header.svg'
 
 export default function Topbar() {
 

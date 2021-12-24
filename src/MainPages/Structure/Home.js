@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import '../MainPages/Home.scss'
-import Blog from '../Components/Blog'
+import React from 'react'
+import '../Style/Home.scss'
+import Blog from '../../Components/Structure/Blog'
 
 
    

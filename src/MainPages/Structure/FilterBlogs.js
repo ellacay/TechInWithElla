@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, useParams } from "react-router-dom";
-import "../MainPages/FilterBlogs.scss"
+import "../Style/FilterBlogs.scss"
    import { useEffect } from "react";
  
    import Card from '@mui/material/Card';

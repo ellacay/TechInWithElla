@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import SideBar from '../Components/SideBar'
-import AuthorBlogs from '../AuthorPages/AuthorBlogs'
+import AuthorBlogs from '../Structure/AuthorBlogs'
 import AddIcon from '@mui/icons-material/Add';
 import IconButton from '@mui/material/IconButton';
-import { useEffect } from "react";
-   
+import "../Style/AuthorHome.scss";
 const Home = (({history})=>{
 
   const [error, setError] = useState("") 
@@ -18,35 +16,7 @@ const Home = (({history})=>{
 
 
     const useStyles = makeStyles((theme) => ({
-buttons:{
-  width:"100vw",
 
-  display:"flex",
-flexDirection:"rows",
-
-
-},
-body:{
-  width:"95vw",
-
-    display:"flex",  
-
-  flexDirection:"column",
-  
-  },
-  header:{
-   
-    display:"flex",
-  flexDirection:"row",
-
-  
-  },
-    
-  
-    title:{
-
-      textSize:"100%",
-        },
     }))
 
          

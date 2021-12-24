@@ -1,10 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import ReactMarkdown from "react-markdown";
-import MuiAlert from "@mui/material/Alert";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
-import Snackbar from "@mui/material/Snackbar";
-import { set } from "@firebase/database";
+
 import axios from "axios"
 
 
@@ -28,31 +25,8 @@ const EditPost = (()=>{
   }, [id]);
 
 
-    
-
-
-
-
-
-
-
-    const [openError, setOpenError] = React.useState(false);
-
-    const [error, setError] = React.useState("");
-      const handleError = () => {
-        setOpenError(!openError);
-      };
   
-    const Alert = React.forwardRef(function Alert(props, ref) {
-        return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-      });
-
-      const PF = "http://localhost:5000/images/";
    
-      const [name, setName] = useState("");
-      const [email, setEmail] = useState("");
-      const [comment, setComment] = useState(null);
-      const [postId, setPostId] = useState(null);
 
       const handleSubmit = async (e) => {
         e.preventDefault();

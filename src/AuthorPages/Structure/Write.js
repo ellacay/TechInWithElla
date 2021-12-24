@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Write.css";
+import "../Style/Write.scss"
 import axios from "axios";
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -7,28 +7,18 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { makeStyles } from '@material-ui/core/styles'
 
 export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
 
-  const useStyles = makeStyles((theme) => ({
-
-
-        }))
-    
         const [category, setCategory] = React.useState('');
 
         const handleCategory = (event) => {
           setCategory(event.target.value);
         };
 
-        
-        const { promisify } = require('util');
-const fs = require('fs');
-const convert = require('heic-convert');
 
   const handleSubmit = async (e) => {
     let photo = ""

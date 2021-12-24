@@ -13,12 +13,41 @@
       font-size:1.5em;
     }
 
+.aboutBody{
+  padding:10vw;
+}
+    .profileImage{
+      width: 80vw;
+        height: auto;
+      border-radius: 25px;
 
+      }
+
+
+
+ 
       .body{
         padding:10vw;
       }
-      qr{
+      .qr{
           width:100px;
        align-self:center;
       }
       
+
+      @media(min-width:40em){
+
+     .profileImage{
+      width: 80vw;
+ 
+      }
+
+
+}
+@media(min-width:60em){
+
+     .profileImage{
+      width: 35vw;
+ 
+      }
+  }
