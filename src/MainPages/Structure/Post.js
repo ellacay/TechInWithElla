@@ -116,7 +116,7 @@ function ReplyTernary(props) {
         const [email, setEmail] = useState("");
         const [content, setContent] = useState(null);
 
-     return(   <div className="body">
+     return(   <div className="Post">
     
    
     <div  className="addCommentBody" >
@@ -159,7 +159,7 @@ function ReplyTernary(props) {
 
   
     return(
-        <div className="body">
+        <div className="Post">
  
     
     
@@ -254,11 +254,11 @@ function ReplyTernary(props) {
       <h4 >Add Comment</h4>
          
           <div  className="addCommentBody" >
-
-        <input className="inputInfo"    value={name}
+<div className="addCommentID" >   <input className="inputInfo"    value={name}
         onChange={(e) => setName(e.target.value)} type="text" placeholder="Name"></input>
             <input className="inputInfo"  value={email}
-            onChange={(e) => setEmail(e.target.value)} type="text"  placeholder="Email"></input>
+            onChange={(e) => setEmail(e.target.value)} type="text"  placeholder="Email"></input> </div>
+      
          
             <textarea value={content}
             onChange={(e) => setContent(e.target.value)} className="textArea"  placeholder= "Join the discussion!"/>

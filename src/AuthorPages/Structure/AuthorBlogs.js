@@ -61,7 +61,7 @@ const AuthorBlogs = (({history})=>{
     title={blogPosts.title}
     subheader={new Date(blogPosts.createdAt).toDateString()}
   />
-<div  className="body">
+<div  className="EditBlogs">
   <img className="image" src={PF + blogPosts.photo} alt="" />
 
 

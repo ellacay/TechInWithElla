@@ -59,7 +59,7 @@ const FilterBlogs = (({history})=>{
 
 
     return(
-        <div className="body" key="Blogs">
+        <div className="FilterBlogs" key="Blogs">
 
 
 
@@ -112,12 +112,9 @@ const FilterBlogs = (({history})=>{
 
  }} >Thoughts?</button>
  </div>
- <div className="body" key="Blogs">
-
-</div>
+ <div className="Blogs" key="Blogs">
 
 
-<div >
       <Grid
       container
       spacing={3}
@@ -127,7 +124,7 @@ const FilterBlogs = (({history})=>{
   >
 
   {filter.map((blogPosts) => (
-    <Grid item     width="130%" >
+    <Grid item     >
     <Card 
     className="card"
     onClick={() => {

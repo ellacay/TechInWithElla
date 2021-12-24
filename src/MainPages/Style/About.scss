@@ -1,4 +1,8 @@
 
+  .About{
+display: flex;
+      flex-direction: column;
+      align-items: center;
     .text{
 
     margin:30px;
@@ -7,10 +11,11 @@
     .title{
       display: flex;
       flex-direction: column;
-      width: 30%;
+      width: auto;
       font-family: Quicksand, sans-serif;
       font-weight:bold;
       font-size:1.5em;
+      margin: 0px;
     }
 
 .aboutBody{
@@ -20,15 +25,13 @@
       width: 80vw;
         height: auto;
       border-radius: 25px;
+       margin-bottom: 0px;
 
       }
 
 
 
- 
-      .body{
-        padding:10vw;
-      }
+
       .qr{
           width:100px;
        align-self:center;
@@ -39,7 +42,7 @@
 
      .profileImage{
       width: 80vw;
- 
+
       }
 
 
@@ -50,4 +53,6 @@
       width: 35vw;
  
       }
+  }
+
   }

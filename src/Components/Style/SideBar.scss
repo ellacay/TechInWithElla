@@ -60,9 +60,24 @@ height:30px
   border-width:1px;
   border-style:solid;
   padding: 20px;
-  width: 12vw;
+ 
   height: auto;
   margin:10px;
+
+  .image{
+
+  width: 100%;
+    border-radius:50px;
+    display:flex;
+    justify-content:center;
+
+
+
+  
+
+
+}
+
 
             
 }
@@ -79,20 +94,6 @@ padding:2px;
 
 }
 
-.image{
-
-    width: 10px;
-    height: 10px;
-    border-radius:50px;
-    display:flex;
-    justify-content:center;
-
-
-
-  
-
-
-}
 
 .inputs{
 
@@ -123,5 +124,5 @@ flex-direction:column;
     display: flex;
          
   }
-
+  
   }

@@ -6,10 +6,10 @@ import Contact from "../../Images/contactQR.jpeg";
 const About = () => {
   return (
    
-      <div >
+      <div        className="About">
      
         <img
-          style={{ cssFloat: "left", margin: "30px" }}
+          style={{ cssFloat: "left"}}
           className="profileImage"
           src={Profile}
           height="100"

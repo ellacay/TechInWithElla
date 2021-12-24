@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Blog from './Components/Structure/Blog'
 import { makeStyles } from '@material-ui/core/styles'
 import Home from './MainPages/Structure/Home'
 import Post from './MainPages/Structure/Post'
@@ -20,7 +19,7 @@ export const Routes = () => {
          display:"flex",
         
             width: "95wv",
-         justifyContent:"center"
+    
         },
         sideBar:{
             width:"1wv",
@@ -46,8 +45,7 @@ export const Routes = () => {
               <Route path="/" exact component={Home} />
               <Route path="/authorHome" exact component={AuthorHome} />
               <Route path="/writeTechInWithElla" exact component={Write} />
-              <Route path="/blog" exact component={Blog} />
-           
+  
       
               <Route path="/post/:id" exact component={Post} />
               <Route path="/editPost/:id" exact component={EditPost} />

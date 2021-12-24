@@ -43,14 +43,14 @@ const Home = (({history})=>{
 };
   
 
-    const classes = useStyles()
+ 
     return(
 <div>
 {author ? (
 
-<div className={classes.body} key="Blogs">
-<div className={classes.header}  >
-<p className={classes.title}  >Author Mode </p>
+<div className="AuthorHome" key="Blogs">
+<div className="header"  >
+<p className="title"  >Author Mode </p>
 
 
       <IconButton onClick={() => {
@@ -60,7 +60,7 @@ const Home = (({history})=>{
     }}
             key={`addButton`}
          
-            className={classes.headerButton}
+            className="headerButton"
           >
             <AddIcon></AddIcon>
           </IconButton>

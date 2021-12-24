@@ -1,4 +1,11 @@
-        .writeImg{
+
+
+                .postBody{
+          
+          padding-left:5vw;
+          padding-right:5vw;
+        
+              .writeImg{
           
     width:100%;
           height: auto;         
@@ -7,14 +14,7 @@
           margin-top:2%;
           float:left;
         }
-        .body{
-          
-          padding-left:10vw;
-          padding-right:10vw;
-        
-      
-      
-        }
+
         .title{
           text-align:center;
         }
@@ -36,6 +36,58 @@
         
       
         }
+        line{
+          
+       border-left:solid
+
+
+        }
+
+  
+
+        .textArea{
+          
+          
+          margin-left:20px;
+          margin-right:20px;
+        
+      
+          width:100%;
+      
+        }
+ 
+        .arrow{
+         border-left:Solid;
+         border-width:1px;
+         }
+        
+      
+        }
+
+
+       .commentSection{
+          
+          display:flex;
+          flex-direction:column; 
+          width:100%
+      
+        }
+        .commentText{
+          
+          margin:1%
+      
+        }
+        .commentName{
+          color:#2195ed;
+          margin-left: 1%;
+          margin-right:2%;
+        }
+        .commentWrite{
+          
+         width:50%;
+      
+        }
+
         .commentHeader{
          display:flex;
          flex-direction:row; 
@@ -67,14 +119,7 @@
 
         }
 
-        line{
-          
-       border-left:solid
-
-
-        }
-
-        .addBody{
+              .addBody{
           
           
           margin:1px;
@@ -87,53 +132,24 @@
         }
 
         .addCommentBody{
-          
-          flex-direction:row;
+          display: flex;
+          flex-direction:column;
           margin:1px;
           
  
       
 
         }
+
+        .addCommentID{
+              display: flex;
+          flex-direction:row;
+
+        }
     .addCommentButton{
 background-color:#2195ed;
     }
-
-        textArea{
-          
-          
-          margin:1px;
-        
-      
-          width:100%;
-      
-        }
-        .commentSection{
-          
-          display:flex;
-          flex-direction:column; 
-          width:100%
-      
-        }
-        .commentText{
-          
-          margin:1%
-      
-        }
-        .commentName{
-          color:#2195ed;
-          margin-left: 1%;
-          margin-right:2%;
-        }
-        .commentWrite{
-          
-         width:50%;
-      
-        }
-        .arrow{
-         border-left:Solid;
-         border-width:1px;
-         }
-        
-
-        
+    .inputInfo{
+      width:100%;
+      margin: 10px;
+    }

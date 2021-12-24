@@ -1,20 +1,28 @@
+
+
+          .FilterBlogs{
+                 width:90%;
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
      .container{
             position: relative;
             text-align: center;
-            color: white
+            color: white;
+               width:50vw;
           }
-          
-
-          .body{
-            width:90%;
-            margin-right:5%;
-            margin-left:5%;
+          .Blogs{
+                 display: flex;
+            flex-direction: column;
+                      align-items: center;
           }
+       
           .card{
             border-style:solid;
             border-color:#b291f2;
-            width:300px;
-            height:300px;
+            width:90vw;
+         
         
          }
          .cardHeader{
@@ -29,8 +37,7 @@
         
         .image{
         
-            width: 300px;
-            height: 200px;
+          
           
          
         object-fit: cover;
@@ -71,3 +78,26 @@ flex-direction:row;
                 color: #C29EFC;
               }
           }
+
+
+          }
+@media(min-width:40em){
+   .card{
+       
+            width:50vw;
+         
+        
+         }
+
+  
+}
+@media(min-width:60em){
+
+   .card{
+        
+            width:32vw;
+         
+        
+         }
+  
+  }
