@@ -1,0 +1,158 @@
+
+
+.postBody{
+  display: flex;
+  align-items:center;
+  width: 70vw;
+  justify-content: center;
+     flex-direction: column;
+                  padding:20px;
+
+                  #nameComment{
+              margin-right:5px;
+                  }
+                  .inputInfo{
+                    width:50%;
+                    margin-bottom:5px;
+      
+                  }
+
+
+p{
+       font-family: Quicksand, sans-serif;
+                  }
+
+                
+        .textBody{
+          width: 70vw;
+
+              display: flex;
+          align-items:center;  justify-content: center;
+          flex-direction: column;
+       
+      
+      
+        }
+        .markdown{
+
+          width: 60vw;
+          margin:1px;
+        
+      
+        }
+  .writeImg{
+ margin-left:auto;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+        }
+}
+    
+        line{
+          
+       border-left:solid
+
+
+        }
+
+  
+
+    
+ 
+        .arrow{
+         border-left:Solid;
+         border-width:1px;
+         }
+        
+      
+        
+
+       .commentSection{
+          
+          display:flex;
+          flex-direction:column; 
+          width:100%
+      
+        }
+        .commentText{
+          
+          margin:1%
+      
+        }
+        .commentName{
+          color:#2195ed;
+          margin-left: 1%;
+          margin-right:2%;
+        }
+        .commentWrite{
+          
+         width:50%;
+      
+        }
+
+        .commentHeader{
+         display:flex;
+         flex-direction:row; 
+     background-color:#d6d6d4;
+     width:"100%";
+        
+      
+        }
+        .commentBody{
+          
+        
+          border-style:solid;
+          border-color:#d6d6d4;
+          border-radius:15px;
+        
+
+        }
+        .replyBody{
+          
+          
+          margin-left:5%;
+          margin-top:10px;   
+          margin-top:10px;
+          border-style:solid;
+          border-color:#d6d6d4;
+          border-radius:15px;
+          width:95%;
+      
+
+        }
+
+              .addBody{
+          
+          
+          margin:1px;
+    
+      
+          width:100%;
+      
+      
+
+        }
+
+        .addCommentBody{
+          display: flex;
+          flex-direction:column;
+          margin:1px;
+          width:70vw;
+ 
+      
+
+        }
+
+        .addCommentID{
+              display: flex;
+          flex-direction:row;
+
+        }
+    .addCommentButton{
+background-color:#2195ed;
+    }
+
+    @media(min-width:50em){
+
+    }
