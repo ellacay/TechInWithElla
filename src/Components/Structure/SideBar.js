@@ -6,12 +6,12 @@ import MuiAlert from "@mui/material/Alert";
 import "../Style/SideBar.scss"
    import { useEffect } from "react";
    import axios from "axios"
-   
+   import { Button } from "@material-ui/core";
 const SideBar = (({history})=>{
 
 
     const [posts, setPosts] = useState([]);
-    const categories = ["My Experience", "Cool Ideas", "Thoughts"]
+    const categories = ["My Experience", "Cool Ideas", "Thoughts?"]
 
     
     useEffect(() => {
@@ -82,7 +82,7 @@ onClose={handleSubscribeSuccessClose}
 <div className="align">
 <img className="image" src={Profile} alt=""></img>
 <p className="about" >HI, I'M ELLA</p>
-<button    className="subscribeButton" >About Me!</button>
+<a  href="/about"  className="aboutLink" >About Me!</a>
 </div>
      <p className="categories">Categories</p>
 

@@ -8,7 +8,8 @@ import "../Style/AuthorBlogs.scss"
    import {
        Grid
      } from '@material-ui/core/'
-   
+      import { CardActionArea } from '@mui/material';
+
 const AuthorBlogs = (({history})=>{
 
 
@@ -39,18 +40,11 @@ const AuthorBlogs = (({history})=>{
 
 
 
-<div >
-      <Grid
-      container
-      spacing={3}
-      direction="row"
-    
-     
-  >
+<div className="editGrid">
+ 
 
   {posts.map((blogPosts) => (
-    <Grid item xs={12} sm={4} md={3} >
-    <Card 
+  <Card 
     className="card"
 
     sx={{ maxWidth: 345 }}>
@@ -61,26 +55,30 @@ const AuthorBlogs = (({history})=>{
     title={blogPosts.title}
     subheader={new Date(blogPosts.createdAt).toDateString()}
   />
-<div  className="EditBlogs">
+      <div  >
+        
   <img className="image" src={PF + blogPosts.photo} alt="" />
+      
 
-
- <button   className="edit"  onClick={() => {
+    <CardActionArea>
+ <button   className="edit" onClick={() => {
    
     window.location.replace("/editpost/" + blogPosts._id);
 
 }}
 ><Edit></Edit></button>
-  </div>
+
+    </CardActionArea>
+      </div>
+
   </Card>
-  </Grid>
+
 
 ))}
 
-  </Grid>
   
   </div>
- 
+
     )
 })
 

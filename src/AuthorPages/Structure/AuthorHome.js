@@ -1,23 +1,18 @@
 import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import AuthorBlogs from '../Structure/AuthorBlogs'
+import AuthorBlogs from './AuthorBlogs'
 import AddIcon from '@mui/icons-material/Add';
 import IconButton from '@mui/material/IconButton';
 import "../Style/AuthorHome.scss";
 const Home = (({history})=>{
 
   const [error, setError] = useState("") 
-    const [author, setAuthor] = useState(false) 
+    const [author, setAuthor] = useState(true) 
 
   let name = "EllaCay68"
   let password ="blogforlifex"
     const [authorName, setAuthorName] = useState("") 
  const [authorPassword, setAuthorPassword] = useState("") 
-
-
-    const useStyles = makeStyles((theme) => ({
-
-    }))
 
          
   const login = async () => {
@@ -64,8 +59,11 @@ const Home = (({history})=>{
           >
             <AddIcon></AddIcon>
           </IconButton>
-          </div>
-<AuthorBlogs></AuthorBlogs>
+            </div>
+            <div className="FilterBlogs"> 
+              <AuthorBlogs></AuthorBlogs>
+              </div>
+
 </div>
 
 
@@ -81,7 +79,7 @@ const Home = (({history})=>{
               onChange={e=>setAuthorName(e.target.value)}
             />
                 <input
-              type="text"
+              type="password"
               placeholder="Password"
           
               autoFocus={true}

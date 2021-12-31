@@ -17,7 +17,7 @@ export const Routes = () => {
     const useStyles = makeStyles((theme) => ({
         body:{
          display:"flex",
-        
+          justifyContent: "center",
             width: "95wv",
     
         },

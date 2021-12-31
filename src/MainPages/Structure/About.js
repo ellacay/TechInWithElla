@@ -17,8 +17,9 @@ const About = () => {
           alt="Ella"
               />
               
-              <p className="text">
-                     <p className="title">Ella Cay Smith</p>
+              <div className="text">
+        <p className="title">Ella Cay Smith</p>
+        <p>
           Young females are instrumental in maintaining productivity, creativity
           and passion within the ever-changing workplace. This is especially
           true for developing industries such as technology, which has a current
@@ -60,10 +61,10 @@ const About = () => {
           <br/>
           Contact me!
           
-      
-
-          </p>
-          <img  className="qr" src={Contact} alt="contact"/>
+      </p>
+   <img  className="qr" src={Contact} alt="contact"/>
+          </div>
+       
     
 
       </div>

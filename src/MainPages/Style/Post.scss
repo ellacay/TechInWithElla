@@ -1,41 +1,54 @@
 
 
-                .postBody{
-          
-          padding-left:5vw;
-          padding-right:5vw;
-        
-              .writeImg{
-          
-    width:100%;
-          height: auto;         
-           border-radius: 10px;
-          object-fit: fill;
-          margin-top:2%;
-          float:left;
-        }
+.postBody{
+  display: flex;
+  align-items:center;
+  width: 70vw;
+  justify-content: center;
+     flex-direction: column;
+                  padding:20px;
 
-        .title{
-          text-align:center;
-        }
+                  #nameComment{
+              margin-right:5px;
+                  }
+                  .inputInfo{
+                    width:50%;
+                    margin-bottom:5px;
+      
+                  }
 
+
+p{
+       font-family: Quicksand, sans-serif;
+                  }
+
+                
         .textBody{
-        
-          
+          width: 70vw;
+
               display: flex;
-          align-items:center;
+          align-items:center;  justify-content: center;
           flex-direction: column;
        
       
       
         }
         .markdown{
-          
+
           width: 60vw;
           margin:1px;
         
       
         }
+  .writeImg{
+ margin-left:auto;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+        }
+}
+    
         line{
           
        border-left:solid
@@ -45,16 +58,7 @@
 
   
 
-        .textArea{
-          
-          
-          margin-left:20px;
-          margin-right:20px;
-        
-      
-          width:100%;
-      
-        }
+    
  
         .arrow{
          border-left:Solid;
@@ -62,8 +66,7 @@
          }
         
       
-        }
-
+        
 
        .commentSection{
           
@@ -135,7 +138,7 @@
           display: flex;
           flex-direction:column;
           margin:1px;
-          
+          width:70vw;
  
       
 
@@ -149,7 +152,7 @@
     .addCommentButton{
 background-color:#2195ed;
     }
-    .inputInfo{
-      width:100%;
-      margin: 10px;
+
+    @media(min-width:50em){
+
     }

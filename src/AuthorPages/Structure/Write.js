@@ -48,27 +48,14 @@ export default function Write() {
   };
   return (
     <div className="write">
-      {file && (
+   
+   
+ 
+
+     {file && (
         <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
       )}
-   
-      <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel value={category}id="demo-simple-select-label">Category</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={category}
-          label="Category"
-          onChange={handleCategory}
-        >
-          <MenuItem value={"My Experience"}>My Experience</MenuItem>
-          <MenuItem value={"Cool Ideas"}>Cool Ideas</MenuItem>
-          <MenuItem value={"Thoughts?"}>Thoughts?</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
-    <p>* Note ony png, jpeg and jpg accepted</p>
+      
       <form className="writeForm" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
           <label htmlFor="fileInput">
@@ -95,11 +82,25 @@ export default function Write() {
             autoFocus={true}
             onChange={e=>setTitle(e.target.value)}
           />
-   
+             <Box            className="selectCategory" sx={{ minWidth: 120 }}> <FormControl fullWidth> <InputLabel value={category}>Category</InputLabel>
+        <Select
+        
+          id="demo-simple-select"
+          value={category}
+          label="Category"
+          onChange={handleCategory}
+        >
+          <MenuItem value={"My Experience"}>My Experience</MenuItem>
+          <MenuItem value={"Cool Ideas"}>Cool Ideas</MenuItem>
+          <MenuItem value={"Thoughts?"}>Thoughts?</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+
           
 
         </div>
-        
+              <p>* Note ony png, jpeg and jpg accepted</p>
         <div className="writeFormGroup">
           <textarea
             placeholder="Tell your story..."
@@ -108,7 +109,7 @@ export default function Write() {
             onChange={e=>setDesc(e.target.value)}
           ></textarea>
         </div>
-        <button className="writeSubmit" type="submit">
+        <button className="writeButton" type="submit">
           Publish
         </button>
       </form>

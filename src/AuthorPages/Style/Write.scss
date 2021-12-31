@@ -2,32 +2,27 @@
 display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
+width:80vw;
+
+p{
+ width:100%; 
+}
   }
   
   .writeImg {
- margin-left:auto;
-    width: 100%;
-    height: 350px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  @media(min-width:50em){
-      .writeImg {
- margin-left:auto;
-  height: 450px;
-    border-radius: 10px;
-    object-fit: cover;
+ width:100%;
+        object-fit: cover;
   }
 
-  }
-  .writeForm {
+
+  .selectCategory{
      margin-left:auto;
-    position: relative;
   }
   
   .writeFormGroup {
-  
+    margin-top: 20px;
+  width:80vw;
     display: flex;
     align-items: center;
   }
@@ -46,19 +41,23 @@ align-items: center;
   }
   
   .writeInput {
-    font-size: 30px;
+    font-size: 1.3em;
     border: none;
-    padding: 20px;
-    width: 70vw;
+    padding: 10px;
+   width:20vw;
+    
 
   }
-
+.ButtonGroup{
+  display:flex;
+  flex-direction: row;
+}
     
   .writeDetails {
     font-size: 20px;
     border: none;
     padding: 20px;
-    width: 70vw;
+   
   }
   
   .writeInput::placeholder {
@@ -71,31 +70,16 @@ align-items: center;
   }
   
   .writeText {
-    width: 70vw;
+
     height: 100vh;
     font-family: inherit;
-    font-size: 20px;
+    font-size: 1em;
+    width:100%;
   }
-  
-  .writeSubmit {
-    position: absolute;
-    top: 20px;
-    right: 50px;
-    color: white;
-    background-color: #6035d4;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
+
     
-  .writeDelete {
-    position: absolute;
-    top: 20px;
-    right: 150px;
+  .writeButton {
+margin:5px;
     color: white;
     background-color: #6035d4;
     padding: 10px;
@@ -105,4 +89,22 @@ align-items: center;
     cursor: pointer;
     display: flex;
     align-items: center;
+  }
+
+    
+  @media(min-width:50em){
+      .writeImg {
+ margin-left:auto;
+  height: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+   .writeInput {
+    font-size: 2em;
+
+    
+
+  }
+
+
   }

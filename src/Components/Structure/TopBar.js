@@ -32,11 +32,6 @@ export default function Topbar() {
 
     
 
-          <li className="topListItem">
-          <Link style={{ textDecoration: 'none' }}  className="link" to="/authorHome">
-            AUTHOR
-          </Link>
-        </li>
        
 
         </ul>

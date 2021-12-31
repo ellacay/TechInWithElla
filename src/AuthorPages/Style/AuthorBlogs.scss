@@ -31,20 +31,22 @@ object-fit: cover;
 }
 
 
-
-.EditBlogs{
-  width:90%;
-  margin-right:5%;
-  margin-left:5%;
+.editGrid{
+             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+                      align-items: center;
+                      width:110%;
 }
-
 
  .edit{
 
 background-color:#e2d7f7;
 border-style: none;
-margin-left:80%;
+
 color:grey;
+width: 100%;
 }
 .category{
 

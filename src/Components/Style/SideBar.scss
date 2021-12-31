@@ -32,11 +32,26 @@ text-align:center
 
 }
 
+ .aboutLink{
+  cursor: pointer;
+    margin:10px;
+  background-color: #ac82fa;
+border-style:none;
+border-radius:25px;
+height:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+
+}
+
 
 
 
  .subscribeButton{
-  
+  cursor: pointer;
     margin:10px;
   background-color: #ac82fa;
 border-style:none;
@@ -91,6 +106,7 @@ border-left-color:white;
 border-right-color:white;
 border-style:solid;
 padding:2px;
+text-align: center;
 
 }
 

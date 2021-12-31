@@ -7,19 +7,32 @@ import axios from "axios"
 
 const EditPost = (()=>{
 
-    const [title, setTitle] = useState("");
-    const [desc, setDesc] = useState("");
-    const [file, setFile] = useState(null);
+  const [title, setTitle] = useState("");
+  const [photo, setPhoto] = useState("");
+    const [category, setCategory] = useState("");
+        const [newPhoto, setNewPhoto] = useState(false)
+  const [desc, setDesc] = useState("");
+     const [file, setFile] = useState(null);
+  
+  const addPhoto = async (e) => {
+        setFile(e)
+    setNewPhoto(true)
+        };
+
+ 
+ 
   let { id } =
   useParams();
 
 
-
+      const PF = "http://localhost:5000/images/";
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("/posts/" + id);
       setTitle(res.data.title);
       setDesc(res.data.desc);
+      setPhoto(res.data.photo)
+      setCategory(res.data.category)
     };
     getPost();
   }, [id]);
@@ -33,6 +46,9 @@ const EditPost = (()=>{
         const newPost = {
           title,
           desc,
+          category,
+          photo,
+        
         };
    
         try {
@@ -44,12 +60,16 @@ const EditPost = (()=>{
 
       
     return(
-        <div className="write" >
-        {file && (
+      <div className="write" >
+        
+        {newPhoto ? (<div>    {file && (
           <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
-        )}
-     
-       
+        )}</div>):(<div> 
+        {photo && <img className="writeImg" src={PF + photo} alt="" />}
+        </div>)}
+    
+    
+
         <form className="writeForm" onSubmit={handleSubmit}>
           <div className="writeFormGroup">
             <label htmlFor="fileInput">
@@ -59,7 +79,7 @@ const EditPost = (()=>{
               type="file"
               id="fileInput"
               style={{ display: "none" }}
-              onChange={(e) => setFile(e.target.files[0])}
+              onChange={(e) => addPhoto(e.target.files[0])}
             />
   
             <input
@@ -84,14 +104,14 @@ const EditPost = (()=>{
               onChange={e=>setDesc(e.target.value)}
             ></textarea>
           </div>
-          <div>     <button className='writeSubmit' type="submit">
+          <div className='ButtonGroup'>     <button className='writeButton' type="submit">
             Publish
           </button>
               <button       onClick={() => {
    
          axios.delete(`/posts/${id}`);
             window.location.replace("/authorHome/");
-        }}  className='writeDelete' >
+        }}  className='writeButton' >
             Delete
           </button></div>
      

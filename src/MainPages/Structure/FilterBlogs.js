@@ -100,7 +100,7 @@ const FilterBlogs = (({history})=>{
  
  }} >Cool Ideas</button>
  <button   className="buttons" onClick={async () => {
-    let category = "Thoughts"
+    let category = "Thoughts?"
     function isCategory(post) {
         console.log("category", category)
                 return post.category === category
@@ -114,17 +114,10 @@ const FilterBlogs = (({history})=>{
  </div>
  <div className="Blogs" key="Blogs">
 
-
-      <Grid
-      container
-      spacing={3}
-      direction="row"
-    width="80%"
-     
-  >
+<div className='grid'>
 
   {filter.map((blogPosts) => (
-    <Grid item     >
+
     <Card 
     className="card"
     onClick={() => {
@@ -134,21 +127,17 @@ const FilterBlogs = (({history})=>{
   }}
 >
     <CardActionArea>
-    <CardHeader
-    key={blogPosts.title}
-    className="cardHeader"
-    title={blogPosts.title}
-    subheader={new Date(blogPosts.createdAt).toDateString()}
-  />
+        <p    className="text" id="postTitle" >{blogPosts.title}</p>
+    <p className="text" id="postSubtitle" >{new Date(blogPosts.createdAt).toDateString()}</p>
   <img className="image" src={PF + blogPosts.photo} alt="" />
 
     </CardActionArea>
   </Card>
-  </Grid>
+
 
 ))}
 
-  </Grid>
+</div>
   
   </div>
 </div>
