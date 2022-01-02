@@ -70,7 +70,7 @@ export const Routes = () => {
 
 export const App = () => {
   return (
-      <Router>
+      <Router basename="/">
           <Routes />
       </Router>
   )
