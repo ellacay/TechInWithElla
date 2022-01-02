@@ -25,7 +25,7 @@ const EditPost = (()=>{
   useParams();
 
 
-      const PF = "http://localhost:5000/images/";
+      const PF = "http://localhost:3001/images/";
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("/posts/" + id);
