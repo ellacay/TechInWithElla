@@ -44,7 +44,7 @@ router.delete("/:id", async (req, res) => {
 
 //GET POST
 router.get("/:id", async (req, res) => {
-  
+  console.log("1523")
   try {
     const post = await Post.findById(req.params.id);
     res.status(200).json(post);
@@ -82,11 +82,15 @@ query = await Post.find({category:{
 
 //GET ALL POSTS
 router.get("/", async (req, res) => {
+    console.log("274832")
     try {
         const posts = await Post.find()
-        res.status(200).json(posts);
+      res.status(200).json(posts);
+
+      
       } catch (err) {
-        res.status(500).json(err);
+      res.status(500).json(err);
+          console.log("bad")
       }
 });
 
