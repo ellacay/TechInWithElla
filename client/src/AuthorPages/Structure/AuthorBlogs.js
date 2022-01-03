@@ -17,7 +17,7 @@ const AuthorBlogs = (({history})=>{
 
     const [posts, setPosts] = useState([]);
  
-    const PF = "http://localhost:3001/images/";
+    const PF = "http://localhost:5000/images/";
    
     
     useEffect(() => {

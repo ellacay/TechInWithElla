@@ -6,7 +6,7 @@ const postRoute = require("./routes/posts");
 const commentRoute = require("./routes/comments");
 const subscribeRoute = require("./routes/subscribe");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 const multer = require("multer");
 const path = require("path");
 

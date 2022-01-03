@@ -6,10 +6,10 @@ import Header from '../../Images/header.svg'
 export default function Topbar() {
 
   return (
-    <div flexDirection="column">
+    <div flexdirection="column">
 
-    <div flexDirection="row">
-      <div flexDirection="row">
+    <div flexdirection="row">
+      <div flexdirection="row">
  
     
         <ul className="topList">

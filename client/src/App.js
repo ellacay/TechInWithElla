@@ -37,11 +37,11 @@ export const Routes = () => {
   return (
 
     
-      <Switch>
+    <div> 
           <div> 
           <TopBar/>
           <div className={classes.body} >
-          
+            <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/authorHome" exact component={AuthorHome} />
               <Route path="/writeTechInWithElla" exact component={Write} />
@@ -51,20 +51,16 @@ export const Routes = () => {
               <Route path="/editPost/:id" exact component={EditPost} />
               <Route path="/about" exact component={About} />
               <Route path="/filter/:category" exact component={FilterBlogs} />
-              <Route path="/" className={classes.sideBar} exact component={SideBar} />
-      
-
-      
-   
-      
+        
+                  </Switch>
+                        <Route path="/" className={classes.sideBar} exact component={SideBar} />
               <Route path="/post/:id" className={classes.sideBar} exact component={SideBar} />
-
-
               <Route path="/filter/:category" className={classes.sideBar} exact component={SideBar} />
           </div>
           <Footer/>
           </div>
-      </Switch>
+              </div>
+    
   )
 }
 

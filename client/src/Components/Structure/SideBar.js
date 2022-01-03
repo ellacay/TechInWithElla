@@ -27,7 +27,7 @@ const SideBar = (({history})=>{
     
 
 
-    const [subscribeSucessfull, setSubscribeSuccessfull] = React.useState("");
+    const [subscribeSucessfull, setSubscribeSuccessfull] = React.useState(false);
       const handleSubscribeSuccess = () => {
         setSubscribeSuccessfull(true);
       };
@@ -86,9 +86,9 @@ onClose={handleSubscribeSuccessClose}
 </div>
      <p className="categories">Categories</p>
 
-     <ul listStyle = "none">
+     <ul liststyle = "none">
 {categories.map((categories) => (
-    <li  ><Link style={{ textDecoration: 'none' }}  className="link" to={`/filter/${categories}`} >{categories}</Link></li>
+    <li  key={categories}><Link key={`${categories}Link`} style={{ textDecoration: 'none' }}  className="link" to={`/filter/${categories}`} >{categories}</Link></li>
 ))}
 </ul>
 

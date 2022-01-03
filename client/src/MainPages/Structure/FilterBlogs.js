@@ -17,7 +17,7 @@ const FilterBlogs = (({history})=>{
     useParams();
   
  
-    const PF = "http://localhost:3001/images/";
+    const PF = "http://localhost:5000/images/";
     const [posts, setPosts] = useState([]);
 
 
@@ -27,11 +27,13 @@ const FilterBlogs = (({history})=>{
                   
         const fetchPosts = async () => {
             const res = await axios.get(`/posts/`);
+            console.log("get")
             if(category==="All"){
                 setFilter(res.data)
 
             }else{
-                const filtered = await axios.get(`/posts/filter/${category}`);
+              const filtered = await axios.get(`/posts/filter/${category}`);
+               console.log("get")
                 setFilter(filtered.data)
             }
          
@@ -119,6 +121,7 @@ const FilterBlogs = (({history})=>{
   {filter.map((blogPosts) => (
 
     <Card 
+ key={blogPosts._id}
     className="card"
     onClick={() => {
    

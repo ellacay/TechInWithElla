@@ -15,20 +15,40 @@ import "../../MainPages/Style/FilterBlogs.scss"
 } from '@material-ui/core/'
      
 const Home = (({ history }) => {
+    let { category } =
+    useParams();
+  
+ 
+    const PF = "http://localhost:5000/images/";
     const [posts, setPosts] = useState([]);
-        const PF = "http://localhost:3001/images/";
+
+
+
     useEffect(() => {
 
                   
         const fetchPosts = async () => {
             const res = await axios.get(`/posts/`);
-
-            setPosts(res.data)
+   
+         setFilter(res.data)
    
     
-        }
-        fetchPosts()
-    })
+        };
+
+
+ 
+
+      
+           fetchPosts();
+      
+        },
+[category]);
+
+  
+
+      const [filter, setFilter] = useState([]);
+
+      
   return (
        <div className="FilterBlogs" key="Blogs">
 
@@ -43,9 +63,10 @@ const Home = (({ history }) => {
 
 <div className='grid'>
 
-  {posts.map((blogPosts) => (
+  {filter.map((blogPosts) => (
 
     <Card 
+    key={blogPosts._id}
     className="card"
     onClick={() => {
    
