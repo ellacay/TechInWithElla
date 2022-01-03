@@ -27,17 +27,18 @@ const FilterBlogs = (({history})=>{
                   
         const fetchPosts = async () => {
             const res = await axios.get(`/posts/`);
-            console.log("get")
+                  console.log(res.data)
             if(category==="All"){
-                setFilter(res.data)
+              setFilter(res.data)
+                       console.log(res.data)
 
             }else{
               const filtered = await axios.get(`/posts/filter/${category}`);
-               console.log("get")
+                    console.log(res.data)
                 setFilter(filtered.data)
             }
          
-         console.log(res)
+         console.log(res.data)
          setPosts(res.data)
    
     
