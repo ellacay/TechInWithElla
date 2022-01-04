@@ -28,7 +28,7 @@ const EditPost = (()=>{
       const PF = "http://localhost:5000/images/";
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + id);
+      const res = await axios.get("/api/posts/" + id);
       setTitle(res.data.title);
       setDesc(res.data.desc);
       setPhoto(res.data.photo)

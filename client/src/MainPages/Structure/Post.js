@@ -19,18 +19,18 @@ const Post = (()=>{
   const [postId, setPostId] = React.useState("");
   useEffect(() => {
     const getPost = async () => {
-      const posts = await axios.get("/posts/" + id);
+      const posts = await axios.get("/api/posts/" + id);
       setPost(posts.data);
       setTitle(posts.data.title);
       setDesc(posts.data.desc);
       setPostId(posts.data._id)
    
         
-      const comments = await axios.get(`/comment/${posts.data._id}`);
+      const comments = await axios.get(`/api/comment/${posts.data._id}`);
       console.log(comments)
       setComments(comments.data)
       setReplies(comments.data)
-      const replies = await axios.get(`/comment/replies/${posts.data._id}`);
+      const replies = await axios.get(`/api/comment/replies/${posts.data._id}`);
       console.log(replies)
 
     

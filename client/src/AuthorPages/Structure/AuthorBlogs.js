@@ -22,7 +22,7 @@ const AuthorBlogs = (({history})=>{
     
     useEffect(() => {
       const fetchPosts = async () => {
-       const res = await axios.get("/posts");
+       const res = await axios.get("/api/posts");
        console.log(res)
        setPosts(res.data)
      
