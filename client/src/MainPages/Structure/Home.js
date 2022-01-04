@@ -34,7 +34,7 @@ const Home = (({ history }) => {
           console.log(res.data)
           setFilter(res.data)
         } catch (err) {
-          console.status(500).json(err);
+          console.log.json(err);
         }
       }
 
