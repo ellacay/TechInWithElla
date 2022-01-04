@@ -27,15 +27,15 @@ const Home = (({ history }) => {
     useEffect(() => {
 
                   
-        const fetchPosts = async () => {
-            const res = await axios.get(`/posts/`);
-   console.log(res.data)
-         setFilter(res.data)
+      const fetchPosts = async () => {
+
+        try {
+          const res = await axios.get(`/posts/`);
+          console.log(res.data)
+          setFilter(res.data)
+        } catch (err) { }
    
-    
-        };
-
-
+      }
  
 
       
