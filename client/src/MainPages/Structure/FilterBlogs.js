@@ -37,7 +37,6 @@ const FilterBlogs = (({history})=>{
                     console.log(res.data)
                 setFilter(filtered.data)
             }
-         
          console.log(res.data)
          setPosts(res.data)
    

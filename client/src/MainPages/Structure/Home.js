@@ -33,10 +33,10 @@ const Home = (({ history }) => {
           const res = await axios.get(`/posts/`);
           console.log(res.data)
           setFilter(res.data)
-        } catch (err) { }
-   
+        } catch (err) {
+          console.status(500).json(err);
+        }
       }
- 
 
       
            fetchPosts();
