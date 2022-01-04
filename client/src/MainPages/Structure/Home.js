@@ -29,7 +29,7 @@ const Home = (({ history }) => {
                   
         const fetchPosts = async () => {
             const res = await axios.get(`/posts/`);
-   
+   console.log(res.data)
          setFilter(res.data)
    
     
@@ -60,6 +60,36 @@ const Home = (({ history }) => {
 <p>Tech In With Ella is a discussion onn the technology industry. The ins and outs from the pov of a young woman. The journey taken to learn the skills to code and navigate the complications and problems that arose.</p>
 </div>
  
+
+<div className="Blogs" key="Blogs">
+
+<div className='grid'>
+
+  {filter.map((blogPosts) => (
+
+    <Card 
+    key={blogPosts._id}
+    className="card"
+    onClick={() => {
+   
+      window.location.replace("/post/" + blogPosts._id);
+  
+  }}
+>
+    <CardActionArea>
+        <p    className="text" id="postTitle" >{blogPosts.title}</p>
+    <p className="text" id="postSubtitle" >{new Date(blogPosts.createdAt).toDateString()}</p>
+  <img className="image" src={PF + blogPosts.photo} alt="" />
+
+    </CardActionArea>
+  </Card>
+
+
+))}
+
+</div>
+  
+  </div>
 </div>
     
     )
@@ -68,34 +98,3 @@ const Home = (({ history }) => {
 export default Home
 
 
-
-
-// <div className="Blogs" key="Blogs">
-
-// <div className='grid'>
-
-//   {filter.map((blogPosts) => (
-
-//     <Card 
-//     key={blogPosts._id}
-//     className="card"
-//     onClick={() => {
-   
-//       window.location.replace("/post/" + blogPosts._id);
-  
-//   }}
-// >
-//     <CardActionArea>
-//         <p    className="text" id="postTitle" >{blogPosts.title}</p>
-//     <p className="text" id="postSubtitle" >{new Date(blogPosts.createdAt).toDateString()}</p>
-//   <img className="image" src={PF + blogPosts.photo} alt="" />
-
-//     </CardActionArea>
-//   </Card>
-
-
-// ))}
-
-// </div>
-  
-//   </div>
