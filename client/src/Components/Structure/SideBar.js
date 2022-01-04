@@ -13,18 +13,7 @@ const SideBar = (({history})=>{
     const [posts, setPosts] = useState([]);
     const categories = ["My Experience", "Cool Ideas", "Thoughts?"]
 
-    
-    useEffect(() => {
-      const fetchPosts = async () => {
-       const res = await axios.get("/posts");
-       console.log(res)
-       setPosts(res.data)
-     
-      };
-      fetchPosts();
-    
-    }, []);
-    
+
 
 
     const [subscribeSucessfull, setSubscribeSuccessfull] = React.useState(false);

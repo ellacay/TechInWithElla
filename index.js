@@ -45,12 +45,10 @@ app.use("/api/comment", commentRoute);
 app.use("/api/subscribe", subscribeRoute);
 
 
+
 // set static folder
     app.use(express.static("client/build"));
 
-    app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-    });
     
 app.listen(PORT, () => {
   console.log('Backend is running');
