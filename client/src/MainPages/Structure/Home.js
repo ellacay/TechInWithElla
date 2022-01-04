@@ -30,7 +30,7 @@ const Home = (({ history }) => {
       const fetchPosts = async () => {
 
         try {
-          const res = await axios.get(`/posts/`);
+          const res = await axios.get(`/api/posts/`);
           console.log(res.data)
           setFilter(res.data)
         } catch (err) {
