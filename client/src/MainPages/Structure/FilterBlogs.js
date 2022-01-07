@@ -119,7 +119,7 @@ const FilterBlogs = (({history})=>{
 <div className='grid'>
 
    {filter.sort(function (a, b) {
-   return new Date(b.createdAt) - new Date(a.createdAt)}).map((blogPosts) => (
+   return (b.createdAt) - (a.createdAt)}).map((blogPosts) => (
 
     <Card 
  key={blogPosts._id}
