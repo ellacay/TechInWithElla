@@ -52,7 +52,7 @@ const EditPost = (()=>{
         };
    
         try {
-          const res = await axios.put(`/posts/${id}`, newPost);
+          const res = await axios.put(`/api/posts/${id}`, newPost);
           window.location.replace("/post/" + res.data._id);
         } catch (err) {}
       };
@@ -109,7 +109,7 @@ const EditPost = (()=>{
           </button>
               <button       onClick={() => {
    
-         axios.delete(`/posts/${id}`);
+         axios.delete(`/api/posts/${id}`);
             window.location.replace("/authorHome/");
         }}  className='writeButton' >
             Delete

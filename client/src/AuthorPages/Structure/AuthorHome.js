@@ -7,7 +7,7 @@ import "../Style/AuthorHome.scss";
 const Home = (({history})=>{
 
   const [error, setError] = useState("") 
-    const [author, setAuthor] = useState(true) 
+    const [author, setAuthor] = useState(false) 
 
   let name = "EllaCay68"
   let password ="blogforlifex"
