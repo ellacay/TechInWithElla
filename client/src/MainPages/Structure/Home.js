@@ -65,7 +65,9 @@ const Home = (({ history }) => {
 
 <div className='grid'>
 
-  {filter.map((blogPosts) => (
+   {filter.sort(function (a, b) {
+  return (Date.parse(new Date(a.date.split("/").reverse().join("-"))) < Date.parse(new Date(b.date.split("/").reverse().join("-"))))? 1 : -1
+          }).map((blogPosts) => (
 
     <Card 
     key={blogPosts._id}
