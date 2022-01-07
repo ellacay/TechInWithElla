@@ -120,7 +120,7 @@ const FilterBlogs = (({history})=>{
 
    {filter.sort(
      function smallestToBiggest(a, b) {
-  return a.createdAt - b.createdAt;
+  return new Date(a.createdAt) - new Date(b.createdAt)
 })
 
        .map((blogPosts) => (
