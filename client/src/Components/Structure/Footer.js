@@ -10,7 +10,7 @@ export default function Footer() {
       <a href="      https://twitter.com/ellacaysmith/">   <i className="topIcon fab fa-twitter-square"></i></a>
       
       
-      
+    
 
   </div>
     </div>
