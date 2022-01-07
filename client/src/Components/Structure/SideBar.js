@@ -40,7 +40,7 @@ const SideBar = (({history})=>{
         email,
       };
       try {
-        await axios.post("/subscribe", newSubscription);
+        await axios.post("/api/subscribe", newSubscription);
         handleSubscribeSuccess()
         setName("")
         setEmail("")

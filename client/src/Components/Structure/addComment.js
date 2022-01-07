@@ -24,7 +24,7 @@ console.log(props.id)
     
     try {
       console.log("post",postId)
-      const res = await axios.post("/comment", newComment);
+      const res = await axios.post("/api/comment", newComment);
       console.log("bingo")
       window.location.replace("/post/" + res.data.postId);
     } catch (err) {}

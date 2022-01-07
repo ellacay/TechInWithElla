@@ -48,7 +48,7 @@ const Post = (()=>{
 
 
 
-      const PF = "http://localhost:5000/images/";
+      const PF = "https://localhost:5000/images/";
    
 
 
@@ -79,8 +79,8 @@ const Post = (()=>{
           console.log(name)
           console.log(email)
           console.log(content)
-          await axios.post("/comment", newComment);
-          console.log("bingo")
+          await axios.post("/api/comment", newComment);
+   
           window.location.replace("/post/" + postId);
         } catch (err) {}
       };
@@ -147,8 +147,8 @@ function ReplyTernary(props) {
         console.log(email)
         console.log(content)
         console.log(replyTo)
-         axios.post("/comment", newComment);
-        console.log("bingo")
+         axios.post("/api/comment", newComment);
+
         window.location.replace("/post/" + postId);
       
       } catch (err) {}}} className="commentBody">Add Comment</button>
