@@ -65,7 +65,11 @@ const Home = (({ history }) => {
 
 <div className='grid'>
 
-  {filter.map((blogPosts) => (
+  
+   {filter.sort(
+     function smallestToBiggest(a, b) {
+  return new Date(b.createdAt) - new Date(a.createdAt)
+}).map((blogPosts) => (
 
     <Card 
     key={blogPosts._id}
