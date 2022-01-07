@@ -38,7 +38,7 @@ export default function Topbar() {
       </div>
       
       </div>
-      <div className="header" > <img src={Header} alt="Header" /></div>
+ <img src={Header} alt="Header" />
  
 
   
