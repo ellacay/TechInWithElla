@@ -48,7 +48,7 @@ const Post = (()=>{
 
 
 
-      const PF = "https://localhost:5000/images/";
+      const PF = "/images/";
    
 
 

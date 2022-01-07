@@ -19,7 +19,7 @@ const Home = (({ history }) => {
     useParams();
   
  
-    const PF = "http://localhost:5000/images/";
+    const PF = "/images/";
     const [posts, setPosts] = useState([]);
 
 

@@ -17,7 +17,7 @@ const FilterBlogs = (({history})=>{
     useParams();
   
  
-    const PF = "http://localhost:5000/api/images/";
+    const PF = "/images/";
     const [posts, setPosts] = useState([]);
 
 
