@@ -34,7 +34,7 @@ const Home = (({ history }) => {
           console.log(res.data)
           setFilter(res.data)
         } catch (err) {
-          console.log.json(err);
+     
         }
       }
 
@@ -65,9 +65,7 @@ const Home = (({ history }) => {
 
 <div className='grid'>
 
-   {filter.sort(function (a, b) {
-  return (Date.parse(new Date(a.date.split("/").reverse().join("-"))) < Date.parse(new Date(b.date.split("/").reverse().join("-"))))? 1 : -1
-          }).map((blogPosts) => (
+  {filter.map((blogPosts) => (
 
     <Card 
     key={blogPosts._id}
