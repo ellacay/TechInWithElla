@@ -154,13 +154,14 @@ background-color:#2195ed;
     }
 
     @media(min-width:50em){
-        .writeImg{
- margin-left:auto;
-    width: 100%;
+      .postBody{
+ .writeImg{
+
     height: 550px;
-    border-radius: 10px;
-    object-fit: cover;
+ 
         }
+      }
+       
 
 
     }
