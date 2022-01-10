@@ -6,7 +6,7 @@ import "../Style/FilterBlogs.scss"
    import Card from '@mui/material/Card';
    import CardHeader from '@mui/material/CardHeader';
    import { CardActionArea } from '@mui/material';
-
+import {Helmet} from 'react-helmet'
    import axios from "axios"
    import {
        Grid
@@ -63,7 +63,10 @@ const FilterBlogs = (({history})=>{
     return(
         <div className="FilterBlogs" key="Blogs">
 
-
+     <Helmet>
+    <title>Tech In With Ella Blogs</title>
+    <meta name="description" content="Tech In With Ella is a discussion onn the technology industry. The ins and outs from the pov of a young woman. The journey taken to learn the skills to code and navigate the complications and problems that arose" />
+        </Helmet>
 
 <div className="category" >
 <button  className="buttons" onClick={async() => {

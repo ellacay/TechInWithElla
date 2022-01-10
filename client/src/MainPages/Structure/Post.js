@@ -6,6 +6,7 @@ import axios from "axios"
 import { Button } from "@material-ui/core";
 import "../Style/Post.scss"
 import "../../App.css"
+import {Helmet} from 'react-helmet'
 const Post = (()=>{
 
     
@@ -118,7 +119,7 @@ function ReplyTernary(props) {
 
      return(   <div className="Post">
     
-   
+       
     <div  className="addCommentBody" >
 
   <input className="inputInfo"  value={name}
@@ -162,7 +163,11 @@ function ReplyTernary(props) {
         <div className="postBody">
  
     
-    
+      
+           <Helmet>
+    <title>{title}</title>
+    <meta name="description" content={desc} />
+      </Helmet>
 
         
           <div className="textBody" >

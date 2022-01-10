@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../Style/Home.scss'
-
+import {Helmet} from 'react-helmet'
    import Card from '@mui/material/Card';
    import CardHeader from '@mui/material/CardHeader';
    import { CardActionArea } from '@mui/material';
@@ -52,6 +52,11 @@ const Home = (({ history }) => {
   return (
        <div className="FilterBlogs" key="Blogs">
 
+
+           <Helmet>
+    <title>Journey with a Teen In Tech: Home</title>
+    <meta name="description" content="Tech In With Ella is a discussion onn the technology industry. The ins and outs from the pov of a young woman. The journey taken to learn the skills to code and navigate the complications and problems that arose." />
+      </Helmet>
 
 
 

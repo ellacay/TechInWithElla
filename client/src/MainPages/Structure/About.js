@@ -2,12 +2,16 @@ import React from "react";
 import "../Style/About.scss"
 import Profile from "../../Images/profilePic.JPG";
 import Contact from "../../Images/contactQR.jpeg";
-
+import {Helmet} from 'react-helmet'
 const About = () => {
   return (
    
       <div        className="About">
-     
+          <Helmet>
+    <title>About Ella Cay</title>
+    <meta name="description" content="Teen App/Website Developer" />
+      </Helmet>
+      
         <img
           style={{ cssFloat: "left"}}
           className="profileImage"
