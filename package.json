@@ -8,21 +8,20 @@
     "multer": "^1.4.3",
     "nodemailer": "^6.7.1",
     "nodemon": "^2.0.7",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-helmet": "^6.1.0"
   },
   "name": "api",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "start": "nodemon index.js",
-
-"build": "cd client && npm run build",
-        "install-client": "cd client && npm install",
-        "heroku-postbuild": "npm run install-client && npm run build",
-        "server": "nodemon index.js",
-        "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
-
-},
+  "scripts": {
+    "start": "nodemon index.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "server": "nodemon index.js",
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
+  },
   "author": "",
   "license": "ISC",
   "description": ""
